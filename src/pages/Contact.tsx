@@ -10,7 +10,7 @@ import Layout from '@/components/layout/Layout';
 const contactInfo = [
   { icon: MapPin, title: 'Address', content: '123 Education Street, Learning City, 12345' },
   { icon: Phone, title: 'Phone', content: '+1 234 567 890', href: 'tel:+1234567890' },
-  { icon: Mail, title: 'Email', content: 'info@sunriseacademy.edu', href: 'mailto:info@sunriseacademy.edu' },
+  { icon: Mail, title: 'Email', content: 'info@risingenglish.edu.np', href: 'mailto:info@risingenglish.edu.np' },
   { icon: Clock, title: 'Office Hours', content: 'Mon-Fri: 8AM-4PM, Sat: 9AM-1PM' },
 ];
 
@@ -195,7 +195,7 @@ const Contact = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Sunrise Academy Location"
+                    title="The Rising English Secondary Boarding School Location"
                   />
                 </div>
               </Card>

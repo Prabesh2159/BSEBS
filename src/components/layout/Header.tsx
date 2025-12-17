@@ -36,7 +36,7 @@ const Header = () => {
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-xl',
         // --- COLOR CHANGES FOR BLUE THEME ---
         // Header background is now a strong blue (e.g., Indigo 700)
-        'bg-indigo-700',
+        'bg-primary',
         isScrolled ? 'py-2' : 'py-4'
       )}
     >
@@ -48,11 +48,11 @@ const Header = () => {
               <GraduationCap className="w-7 h-7 transition-colors text-primary" />
             </div>
             <div>
-              <h1 className="font-heading font-bold text-xl transition-colors text-primary-foreground">
-                Sunrise Academy
+              <h1 className="font-heading font-bold text-lg transition-colors text-primary-foreground leading-tight">
+                The Rising English Secondary
               </h1>
               <p className="text-xs font-medium transition-colors text-primary-foreground/80">
-                Excellence in Education
+                Boarding School
               </p>
             </div>
           </Link>
