@@ -1,118 +1,171 @@
+import { Eye, Target, Heart, Users, Award, BookOpen, Shield, Star } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Layout from '@/components/layout/Layout';
 
-import React from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+const values = [
+  { icon: BookOpen, title: 'Academic Excellence', description: 'Striving for the highest standards in education' },
+  { icon: Heart, title: 'Moral Values', description: 'Building character through ethics and integrity' },
+  { icon: Shield, title: 'Discipline', description: 'Cultivating self-discipline and responsibility' },
+  { icon: Users, title: 'Respect', description: 'Fostering mutual respect and understanding' },
+  { icon: Star, title: 'Innovation', description: 'Encouraging creative thinking and problem-solving' },
+  { icon: Award, title: 'Leadership', description: 'Developing future leaders with confidence' },
+];
 
 const About = () => {
-  const { t } = useLanguage();
-
   return (
-    <div className="min-h-screen">
+    <Layout>
       {/* Hero Section */}
-      <section className="construction-gradient text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            {t('aboutTitle')}
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto animate-slide-up">
-            {t('aboutDesc')}
-          </p>
-        </div>
-      </section>
-
-      {/* Company Story */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=800&auto=format&fit=crop" 
-                alt="Construction site"
-                className="rounded-lg shadow-lg w-full h-96 object-cover"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-primary mb-6">Our Story</h2>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Founded in 2004, Prestige Construction and Builders began as a small family business with a vision to transform the construction industry in Nepal. Over the years, we have grown into one of the most trusted names in construction, completing over 200 successful projects.
-              </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Our commitment to quality, innovation, and customer satisfaction has been the cornerstone of our success. We believe in building not just structures, but lasting relationships with our clients.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-secondary">200+</div>
-                  <div className="text-gray-600">Projects Completed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-secondary">20+</div>
-                  <div className="text-gray-600">Years Experience</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold text-primary mb-4">{t('missionTitle')}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {t('missionDesc')}
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold text-primary mb-4">{t('visionTitle')}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {t('visionDesc')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Leadership Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Meet the experienced professionals who lead our company with expertise and dedication.
+      <section className="pt-32 pb-16 bg-gradient-to-b from-primary/10 to-background">
+        <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
+              About <span className="text-primary">The Rising English Secondary Boarding  School</span>
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              Since 1995, we have been committed to providing quality education that nurtures the mind, body, and spirit of every student.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center bg-gray-50 p-8 rounded-lg">
-              <div className="w-32 h-32 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-4xl font-bold">
-                RS
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="section-padding">
+        <div className="container-custom mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
+                Our <span className="text-secondary">Story</span>
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  The Rising English Secondary Boarding School was founded in 1995 with a vision to create an educational institution that goes beyond textbooks. Our founders believed that true education encompasses not just academic knowledge, but also moral values, discipline, and life skills.
+                </p>
+                <p>
+                  Over the years, we have grown from a small school with just 50 students to a thriving community of over 500 learners. Our dedicated faculty, modern facilities, and innovative teaching methods have made us one of the most respected institutions in the region.
+                </p>
+                <p>
+                  Today, we continue to uphold the same principles that guided our founding: excellence in education, strong moral foundation, and holistic development of every child who walks through our doors.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Ram Shrestha</h3>
-              <p className="text-secondary font-medium mb-2">Managing Director</p>
-              <p className="text-gray-600 text-sm">25+ years in construction industry</p>
             </div>
-            <div className="text-center bg-gray-50 p-8 rounded-lg">
-              <div className="w-32 h-32 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-4xl font-bold">
-                SP
+            <div className="relative">
+              <div className="bg-primary/10 rounded-2xl p-8">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-card rounded-xl p-6 shadow-md text-center">
+                    <div className="text-4xl font-bold text-primary font-heading">25+</div>
+                    <div className="text-muted-foreground text-sm mt-1">Years of Excellence</div>
+                  </div>
+                  <div className="bg-card rounded-xl p-6 shadow-md text-center">
+                    <div className="text-4xl font-bold text-secondary font-heading">500+</div>
+                    <div className="text-muted-foreground text-sm mt-1">Happy Students</div>
+                  </div>
+                  <div className="bg-card rounded-xl p-6 shadow-md text-center">
+                    <div className="text-4xl font-bold text-primary font-heading">50+</div>
+                    <div className="text-muted-foreground text-sm mt-1">Expert Teachers</div>
+                  </div>
+                  <div className="bg-card rounded-xl p-6 shadow-md text-center">
+                    <div className="text-4xl font-bold text-secondary font-heading">98%</div>
+                    <div className="text-muted-foreground text-sm mt-1">Success Rate</div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Sita Poudel</h3>
-              <p className="text-secondary font-medium mb-2">Chief Architect</p>
-              <p className="text-gray-600 text-sm">20+ years in architectural design</p>
-            </div>
-            <div className="text-center bg-gray-50 p-8 rounded-lg">
-              <div className="w-32 h-32 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-4xl font-bold">
-                KB
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Kiran Bhatta</h3>
-              <p className="text-secondary font-medium mb-2">Project Manager</p>
-              <p className="text-gray-600 text-sm">15+ years in project management</p>
             </div>
           </div>
         </div>
       </section>
-    </div>
+
+      {/* Vision & Mission */}
+      <section className="section-padding bg-muted">
+        <div className="container-custom mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card variant="elevated" className="group">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+                  <Eye className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
+                </div>
+                <CardTitle className="text-2xl">Our Vision</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  To be a leading educational institution that inspires students to become confident, responsible, and compassionate global citizens who make meaningful contributions to society.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card variant="elevated" className="group">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
+                  <Target className="w-8 h-8 text-secondary group-hover:text-secondary-foreground transition-colors" />
+                </div>
+                <CardTitle className="text-2xl">Our Mission</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  To provide quality education in a nurturing environment that fosters academic excellence, moral values, critical thinking, and a lifelong love for learning.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="section-padding">
+        <div className="container-custom mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Our Core <span className="text-primary">Values</span>
+            </h2>
+            <p className="text-muted-foreground">
+              These values guide everything we do at Sunrise Academy.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {values.map((value, index) => (
+              <Card key={value.title} variant="feature" className="group animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <value.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg text-foreground mb-2">{value.title}</h3>
+                  <p className="text-muted-foreground text-sm">{value.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Principal's Message */}
+      <section className="section-padding bg-secondary text-secondary-foreground">
+        <div className="container-custom mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
+                Message from the Principal
+              </h2>
+            </div>
+            <div className="bg-card/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="w-32 h-32 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-16 h-16 text-primary" />
+                </div>
+                <div>
+                  <blockquote className="text-lg italic mb-6 text-secondary-foreground/90">
+                    "At Sunrise Academy, we believe that every child has unique potential waiting to be unlocked. Our role as educators is to provide the right environment, guidance, and opportunities for each student to discover their strengths and grow into their best selves. We are committed to nurturing not just brilliant minds, but also kind hearts and strong character."
+                  </blockquote>
+                  <div>
+                    <p className="font-semibold">Dr. Sarah Johnson</p>
+                    <p className="text-secondary-foreground/70">Principal, Sunrise Academy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 };
 
