@@ -117,7 +117,7 @@ const About = () => {
               Our Core <span className="text-primary">Values</span>
             </h2>
             <p className="text-muted-foreground">
-              These values guide everything we do at Sunrise Academy.
+              These values guide everything we do at The Rising English Secondary Boarding School.
             </p>
           </div>
 
@@ -153,11 +153,11 @@ const About = () => {
                 </div>
                 <div>
                   <blockquote className="text-lg italic mb-6 text-secondary-foreground/90">
-                    "At Sunrise Academy, we believe that every child has unique potential waiting to be unlocked. Our role as educators is to provide the right environment, guidance, and opportunities for each student to discover their strengths and grow into their best selves. We are committed to nurturing not just brilliant minds, but also kind hearts and strong character."
+                    "At The Rising English Secondary Boarding School, we believe that every child has unique potential waiting to be unlocked. Our role as educators is to provide the right environment, guidance, and opportunities for each student to discover their strengths and grow into their best selves. We are committed to nurturing not just brilliant minds, but also kind hearts and strong character."
                   </blockquote>
                   <div>
                     <p className="font-semibold">Dr. Sarah Johnson</p>
-                    <p className="text-secondary-foreground/70">Principal, Sunrise Academy</p>
+                    <p className="text-secondary-foreground/70">Principal, The Rising English Secondary Boarding School</p>
                   </div>
                 </div>
               </div>

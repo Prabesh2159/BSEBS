@@ -14,8 +14,8 @@ const Footer = () => {
                 <GraduationCap className="w-7 h-7 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-xl">Sunrise Academy</h3>
-                <p className="text-sm text-card/70">Excellence in Education</p>
+                <h3 className="font-heading font-bold text-lg leading-tight">The Rising English Secondary</h3>
+                <p className="text-sm text-card/70">Boarding School</p>
               </div>
             </div>
             <p className="text-card/80 leading-relaxed">
@@ -64,8 +64,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:info@sunriseacademy.edu" className="text-card/80 hover:text-primary transition-colors">
-                  info@sunriseacademy.edu
+                <a href="mailto:info@risingenglish.edu.np" className="text-card/80 hover:text-primary transition-colors">
+                  info@risingenglish.edu.np
                 </a>
               </li>
             </ul>
@@ -107,7 +107,7 @@ const Footer = () => {
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-card/60 text-sm">
-              © 2024 Sunrise Academy. All rights reserved.
+              © 2024 The Rising English Secondary Boarding School. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-card/60 hover:text-card transition-colors">

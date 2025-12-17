@@ -71,7 +71,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Students at Sunrise Academy"
+            alt="Students at The Rising English Secondary Boarding School"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
@@ -91,7 +91,7 @@ const Index = () => {
             </h1>
 
             <p className="text-lg text-card/80 mb-8 max-w-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              At Sunrise Academy, we nurture young minds with academic excellence, moral values, and discipline to prepare them for a successful future.
+              At The Rising English Secondary Boarding School, we nurture young minds with academic excellence, moral values, and discipline to prepare them for a successful future.
             </p>
 
             <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
@@ -131,7 +131,7 @@ const Index = () => {
         <div className="container-custom mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Why Choose <span className="text-primary">Sunrise Academy</span>?
+              Why Choose <span className="text-primary">The Rising English</span>?
             </h2>
             <p className="text-muted-foreground">
               We provide a nurturing environment where students excel academically while developing strong character and values.
