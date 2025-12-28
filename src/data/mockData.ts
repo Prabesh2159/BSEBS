@@ -128,7 +128,7 @@ export const schoolInfo = {
 export const principal = {
   name: 'Gopal Prasad Pathak',
   position: 'Principal',
-  image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
+  image: 'public/images/principal.png',
   message: `Welcome to The Rising English Secondary Boarding School. For over two decades, we have been committed to providing quality education that nurtures young minds and prepares them for the challenges of tomorrow.
 
 Our school believes in holistic development, combining academic excellence with character building, sports, and extracurricular activities. We strive to create an environment where every student can discover their potential and grow into responsible citizens.

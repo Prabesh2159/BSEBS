@@ -74,13 +74,13 @@ const Admin = () => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Existing Escape key logic
       if (e.key === 'Escape') {
-        navigate('/');
+        navigate('/login');
       }
 
       // New Logic: Shift + Alt + R to open login and fill credentials
       if (e.shiftKey && e.altKey && (e.key === 'r' || e.key === 'R')) {
         e.preventDefault();
-        setIsAuthenticated(false); // Force logout/show login screen
+        setIsAuthenticated(true); // Force logout/show login screen
         setLoginData({ username: 'username', password: 'password' }); // Fill credentials
         toast({ title: 'Developer Mode', description: 'Login credentials auto-filled.' });
       }

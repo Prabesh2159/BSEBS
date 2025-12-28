@@ -64,6 +64,8 @@ const Footer = () => {
               <li>Primary Level (1-5)</li>
               <li>Lower Secondary (6-8)</li>
               <li>Secondary Level (9-10)</li>
+              <li>Higher Secondary (11-12) </li>
+              <ul>Management,Hotel Management, Computer Science, Business Studies</ul>
               <li>Science Lab</li>
               <li>Computer Lab</li>
             </ul>
