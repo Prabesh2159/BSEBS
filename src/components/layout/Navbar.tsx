@@ -16,7 +16,17 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     setIsOpen(false);
@@ -24,21 +34,35 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg"
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        isScrolled
+          ? 'bg-card/95 backdrop-blur-md shadow-lg'
+          : 'bg-primary'
+      )}
     >
       <div className="container-school">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo + School Name - visible on all screen sizes */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-1 lg:flex-none">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-secondary-foreground/20 flex-shrink-0">
+            <div className={cn(
+              'w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0',
+              isScrolled ? 'bg-secondary' : 'bg-secondary-foreground/20'
+            )}>
               <img src="/images/logo1.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
             {/* School name - now visible on mobile too */}
             <div className="min-w-0">
-              <h1 className="font-heading font-bold text-sm sm:text-lg md:text-xl leading-tight text-primary-foreground truncate">
-                Brilliant Sagarmatha
+              <h1 className={cn(
+                'font-heading font-bold text-sm sm:text-lg md:text-xl leading-tight transition-colors truncate',
+                isScrolled ? 'text-foreground' : 'text-primary-foreground'
+              )}>
+                The Rising
               </h1>
-              <p className="text-[10px] sm:text-xs text-primary-foreground/80 truncate">
+              <p className={cn(
+                'text-[10px] sm:text-xs transition-colors truncate',
+                isScrolled ? 'text-muted-foreground' : 'text-primary-foreground/80'
+              )}>
                 English Secondary Boarding School
               </p>
             </div>
@@ -53,8 +77,12 @@ const Navbar = () => {
                 className={cn(
                   'px-4 py-2 rounded-md font-medium transition-all duration-300',
                   location.pathname === link.path
-                    ? 'bg-primary-foreground/20 text-primary-foreground'
-                    : 'text-primary-foreground/90 hover:bg-primary-foreground/10 hover:text-primary-foreground'
+                    ? isScrolled
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-primary-foreground/20 text-primary-foreground'
+                    : isScrolled
+                      ? 'text-foreground hover:bg-muted'
+                      : 'text-primary-foreground/90 hover:bg-primary-foreground/10 hover:text-primary-foreground'
                 )}
               >
                 {link.name}
@@ -66,7 +94,10 @@ const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-primary-foreground hover:bg-primary-foreground/10"
+            className={cn(
+              'lg:hidden',
+              isScrolled ? 'text-foreground hover:bg-muted' : 'text-primary-foreground hover:bg-primary-foreground/10'
+            )}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -88,8 +119,12 @@ const Navbar = () => {
                 className={cn(
                   'px-4 py-3 rounded-md font-medium transition-all duration-300',
                   location.pathname === link.path
-                    ? 'bg-primary-foreground/20 text-primary-foreground'
-                    : 'text-primary-foreground/90 hover:bg-primary-foreground/10'
+                    ? isScrolled
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-primary-foreground/20 text-primary-foreground'
+                    : isScrolled
+                      ? 'text-foreground hover:bg-muted'
+                      : 'text-primary-foreground/90 hover:bg-primary-foreground/10'
                 )}
               >
                 {link.name}
