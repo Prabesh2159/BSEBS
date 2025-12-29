@@ -16,8 +16,8 @@ const Layout = ({ children }: LayoutProps) => {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Shift + Alt + R to open admin panel
-      if (e.shiftKey && e.altKey && (e.key === 'r' || e.key === 'R' || e.code === 'KeyR')) {
+      // Ctrl + Alt + P to open admin panel
+      if (e.ctrlKey && e.altKey && (e.key === 'p' || e.key === 'P' || e.code === 'KeyP')) {
         e.preventDefault();
         e.stopPropagation();
         navigate('/admin');
