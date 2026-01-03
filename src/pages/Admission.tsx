@@ -215,7 +215,7 @@ const Admission = () => {
 
               <Button 
                 type="submit" 
-                variant="accent" 
+                variant="maroon" 
                 size="lg" 
                 className="w-full mt-8"
                 disabled={isSubmitting}

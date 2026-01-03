@@ -15,13 +15,13 @@ const Gallery = () => {
       />
 
       {/* Gallery Grid - Album Cards */}
-      <section className="section-padding bg-muted/30">
+      <section className="section-padding">
         <div className="container-school">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryAlbums.map((album, index) => (
               <div
                 key={album.id}
-                className="group relative overflow-hidden rounded-xl cursor-pointer animate-scale-in card-elevated hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-xl cursor-pointer animate-scale-in bg-card shadow-school hover:shadow-xl transition-all duration-300"
                 style={{ animationDelay: `${index * 0.05}s` }}
                 onClick={() => setSelectedAlbum(album)}
               >
@@ -35,16 +35,16 @@ const Gallery = () => {
                 </div>
                 
                 {/* Overlay with Title */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent flex items-end">
-                  <div className="p-5 w-full">
-                    <h3 className="font-heading text-lg font-semibold text-white mb-2 drop-shadow-md">
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent flex items-end">
+                  <div className="p-4 w-full">
+                    <h3 className="font-heading text-lg font-semibold text-primary-foreground mb-1">
                       {album.title}
                     </h3>
                     <div className="flex items-center justify-between">
-                      <span className="badge-new text-[10px] px-2 py-0.5">
+                      <p className="text-primary-foreground/80 text-sm">
                         {album.images.length} {album.images.length === 1 ? 'Photo' : 'Photos'}
-                      </span>
-                      <p className="text-white/70 text-xs">
+                      </p>
+                      <p className="text-primary-foreground/60 text-xs">
                         {new Date(album.date).toLocaleDateString('en-US', { 
                           year: 'numeric', 
                           month: 'short' 
@@ -55,7 +55,7 @@ const Gallery = () => {
                 </div>
 
                 {/* Hover Effect */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-accent-gold rounded-xl transition-colors duration-300" />
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary rounded-xl transition-colors duration-300" />
               </div>
             ))}
           </div>
